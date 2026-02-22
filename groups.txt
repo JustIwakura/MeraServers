@@ -1,0 +1,2 @@
+Mera="https://raw.githubusercontent.com/JustIwakura/MeraServers/refs/heads/main/vless.txt"
+GFP="https://raw.githubusercontent.com/wiki/gfpcom/free-proxy-list/lists/vmess.txt"
