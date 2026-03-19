@@ -1,5 +1,7 @@
+# ⚡ MeraVPN
+# 🔈 Наш Telegram: @MeraVPN
+# – С нас прокси, с вас – подписка!
 #profile-title: base64:4pqFIG1lcmF2cG4=
-#profile-description: base64:8o+IINCd0LDRiCBUZWxlZ3JhbTogQE1lcmFWUE5cbuKAkyDQnSDRgdC90LDRgSDRgdC10YDRgtC40YTQuNC60LDRgtGLLCDRgSDRgtC10LHRjyAtINC/0L7QtNC/0LjRgdC60LAsINCg0LXQsdGP0YIg0L/QvtC00LrQu9GO0YfQsNGC0Yw/IC0g0KLQvtC70YzQutC+INC90LDRh9C40L3QsNC10YLRgdGPINC/0YDQvtCx0LvQtdC80LA/
 #profile-update-interval: 1
 #subscription-userinfo: upload=29; download=12; total=10737418240000000; expire=2546249531
 
