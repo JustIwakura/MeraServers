@@ -1,3 +1,6 @@
+#profile-title: base64:8J+bnCBNZXJhVlBOIHwgVGVsZWdyYW06IEBNZXJhVlBO
+#profile-update-interval: 1
+#subscription-userinfo: upload=29; download=12; total=10737418240000000; expire=2546249531
 vless://47c252f2-7ce5-4dcc-8ff9-1b2504eb6564@gertest4x.nekosocks.com:8443?security=reality&sni=gertest4x.nekosocks.com&fp=chrome&pbk=3cyV7jUE6LazDHAjGBxYfC08OahKK4w7nTtMLsHmYlY&sid=938fc87d3eebfc05&type=xhttp&path=/&mode=packet-up&extra=%7B%22scMaxEachPostBytes%22:+1000000,+%22scMaxConcurrentPosts%22:+100,+%22scMinPostsIntervalMs%22:+30,+%22xPaddingBytes%22:+%22100-1000%22,+%22noGRPCHeader%22:+false%7D&packetEncoding=xudp&encryption=none#%E2%94%8C%E2%80%94%20%F0%9F%8C%8E%20%D0%91%D1%8B%E1%B4%84%E1%B4%9B%E1%B4%A9%D1%8B%E1%B4%87
 hy2://hy2_zbs_spgu:KpIj28a6Za64Q9xx3qayOqzuOc69L15w@144.31.82.152:443/?insecure=1&sni=fn.washing.help&obfs=salamander&obfs-password=HEk1Q5RwrCh21N9TNYYXKnWkB5DqKg#%F0%9F%87%AB%F0%9F%87%AE%20Finland
 hy2://hy2_zbs_spgu:1e4L1KgPlYWUzkoGziUDHjFLqANjLn7g@193.68.88.128:443/?insecure=1&sni=washing.help#%F0%9F%87%B1%F0%9F%87%BB%20Latvia
