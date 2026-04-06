@@ -5,7 +5,7 @@
 #support-url: https://t.me/MeraVPN_bot
 #announce: base64:4oS577iPIFRlbGVncmFtINC60LDQvdCw0Ls6IEBNZXJhVlBOCvCfkqEg0JXRgdC70Lgg0YXQvtGC0LjRgtC1INC90LDRgSDQv9C+0LTQtNC10YDQttCw0YLRjCwg0YLQviDQv9C+0LTQv9C40YjQuNGC0LXRgdGMINC90LAg0L3QsNGIIFRlbGVncmFtINC60LDQvdCw0LshCuKZu++4jyDQkNCy0YLQvi3QvtCx0L3QvtCy0LvQtdC90LjQtSDRgNCw0Lcg0LIgMSDRh9Cw0YEuCvCfjJcg0J/QvtGB0LvQtdC00L3QtdC1INC+0LHQvdC+0LLQu9C10L3QuNC1OiAwNi4wNCB8IDEyOjI2ICjQnNCh0JopCuKdkyDQndC1INGA0LDQsdC+0YLQsNC10YI/IC0g0J7QsdC90L7QstC40YLQtS4=
 
-new-url: https://meravpn.us.ci/sub
+#new-url: https://meravpn.us.ci/sub
 
 vless://47c252f2-7ce5-4dcc-8ff9-1b2504eb6564@gertest4x.nekosocks.com:8443?security=reality&sni=gertest4x.nekosocks.com&fp=chrome&pbk=3cyV7jUE6LazDHAjGBxYfC08OahKK4w7nTtMLsHmYlY&sid=938fc87d3eebfc05&type=xhttp&path=/&mode=packet-up&extra=%7B%22scMaxEachPostBytes%22:+1000000,+%22scMaxConcurrentPosts%22:+100,+%22scMinPostsIntervalMs%22:+30,+%22xPaddingBytes%22:+%22100-1000%22,+%22noGRPCHeader%22:+false%7D&packetEncoding=xudp&encryption=none#%E2%94%8C%20%F0%9F%8C%8E%20%D0%9E%D1%82%20MeraVPN
 hy2://hy2_1kh6cirt:YAzgeUGDFW8VYb0OvYTRryUOLk4ZsgAo@fn.washing.help:443?insecure=1&sni=fn.washing.help#%F0%9F%87%AB%F0%9F%87%AE%E2%94%9C%20Finland
