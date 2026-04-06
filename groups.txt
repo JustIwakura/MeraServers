@@ -1,1 +1,0 @@
-Mera="https://raw.githubusercontent.com/JustIwakura/MeraServers/refs/heads/main/mera.txt"
