@@ -2,13 +2,8 @@
 #profile-update-interval: 1
 #profile-web-page-url: https://MeraVPN.cc.cd
 #support-url: https://t.me/MeraVPN
-#announce: base64:8J+IryBUZWxlZ3JhbSDQutCw0L3QsNC7OiBATWVyYVZQTgoK8J+nkfCfj7/igI3wn5SsINCf0L7QtNC/0LjRgdC60LAg0LHQtdGC0LAt0LLQtdGA0YHQuNGPCvCfp6og0J/QvtGB0LvQtdC00L3QtdC1INC+0LHQvdC+0LLQu9C10L3QuNC1OiAyMzo0MSAo0JzQodCaKQoK8J+TlyDQkNCy0YLQvi3QvtCx0L3QvtCy0LvQtdC90LjQtSDRgNCw0Lcg0LIgMTUg0LzQuNC90YPRgi4=
+#announce: base64:8J+IryBUZWxlZ3JhbSDQutCw0L3QsNC7OiBATWVyYVZQTgoK8J+nkfCfj7/igI3wn5SsINCf0L7QtNC/0LjRgdC60LAg0LHQtdGC0LAt0LLQtdGA0YHQuNGPCvCfp6og0J/QvtGB0LvQtdC00L3QtdC1INC+0LHQvdC+0LLQu9C10L3QuNC1OiAyMzo0NSAo0JzQodCaKQoK8J+TlyDQkNCy0YLQvi3QvtCx0L3QvtCy0LvQtdC90LjQtSDRgNCw0Lcg0LIgMTUg0LzQuNC90YPRgi4=
 
-# profile-title: 🏴 ЧЕРНЫЕ СПИСКИ 🏴 BLACK LISTS | Полная • Full | VLESS
-# profile-update-interval: 1
-# Date/Time: 2026-05-05 / 22:43 (Moscow)
-# Количество: 113
-# For more info and VPN-configs - visit: www.github.com/igareck/vpn-configs-for-russia
 
 vless://75807638-6f19-0bb8-ae08-38492ee85c88@cl-eu-1.edgeflux.ru:52006?type=tcp&headerType=none&security=tls&encryption=none&fp=chrome&flow=xtls-rprx-vision&insecure=1#%F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
 vless://427589c7-f170-4cf3-90d6-8a5864107ddc@fl-2-direct.djarbnet.ru:443?security=tls&type=ws&path=%2Fgetupdates&host=fl-2-direct.djarbnet.ru&sni=fl-2-direct.djarbnet.ru&fp=chrome#%F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%F0%9F%8C%90%20%7C%20%5BIPv6%5D%20%7C%20%5BBL%5D
