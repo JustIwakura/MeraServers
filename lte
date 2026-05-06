@@ -3,7 +3,7 @@
 subscription-userinfo: upload=99080000000000000; download=0; total=999808900000000000; expire=218330064488
 #profile-web-page-url: https://MeraVPN.cc.cd
 #support-url: https://t.me/MeraVPN
-#announce: base64:8J+TtiBMVEUgTFRFIExURSBMVEUgTFRFIExURSBMVEUKCuKdo++4jyBBQkNERUZHOjEyMzQ1LVsoey9cfCE/OjsqI30pXQrwn5OjOiDQotC10YHRgtC+0LLQsNGPINC/0L7QtNC/0LjRgdC60LA=
+#announce: base64:4pqg77iP4p2XINCi0LXRgdGC0L7QstCw0Y8g0L/QvtC00L/QuNGB0LrQsC4K4piY77iPINCU0LDRgtCwINC+0YTRhNC40YbQuNCw0LvRjNC90L7Qs9C+INCy0YvQv9GD0YHQutCwIOKAkyDQvdC10LjQt9Cy0LXRgdGC0L3Qvgrwn5iKINCd0LUg0YPQtNCw0LvRj9C50YLQtSDQv9C+0LTQv9C40YHQutGDLiDQodC60L7RgNC+INCx0YPQtNC10YIg0YDQsNCx0L7RgtCw0YLRjA==
 
 vless://5570943f-6cc3-4a8a-bee3-d15a2b2f53a0@web.pyatnica.pro:2053/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=web.pyatnica.pro&fp=chrome&security=reality&pbk=nN0yOjtfONIcmjurY2SwM1DMkugK5unIWZVnpgYnQCk&sid=9f0e2c6b4833757f#%F0%9F%87%A6%F0%9F%87%B9%20Austria
 vless://b11c8d06-96bf-c350-908d-8663f919e399@at.ws.dznn.net:443/?type=ws&encryption=none&flow=&host=at.ws.dznn.net&path=%2Fupload%2Fsession&security=tls&sni=at.ws.dznn.net&fp=chrome&packetEncoding=xudp#%F0%9F%87%B2%F0%9F%87%AA%20%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B1%D1%8B%D0%BB%D1%8C
