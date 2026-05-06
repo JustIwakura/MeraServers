@@ -874,6 +874,7 @@
         </div>
         <div class="donate-select-desc" style="color: rgba(255,255,255,0.9);">Чтобы использовать VPN установите прокси-клиент Happ.<br><strong>Выберите через что установить Happ:</strong></div>
         <button class="donation-btn" id="androidPlayBtn" style="margin-bottom: 0.8rem;"><i class="fab fa-google-play"></i> Установить из Google Play</button>
+            <div style="text-align: center; color: rgba(255,255,255,0.5); margin: 0.5rem 0;">или</div>
         <button class="donation-btn" id="androidGitBtn" style="margin-bottom: 0.8rem;">Установить из GitHub</button>
         <button class="donation-btn" id="androidNextBtn" style="margin-bottom: 0.8rem;">Дальше</button>
         <button class="back-btn" id="androidBackBtn">Назад</button>
@@ -883,10 +884,6 @@
 <!-- 12. Android — ключ -->
 <div class="modal-overlay" id="androidKeyModal">
     <div class="modal">
-        <div class="donate-select-header">
-            <i class="fas fa-key"></i>
-            <h2>Завершите установку</h2>
-        </div>
         <div class="donate-select-desc" style="color: rgba(255,255,255,0.9); text-align: left;">1. Скопируйте ключ-ссылку ниже<br>2. Зайдите в приложение<br>3. Нажмите на 3 точки, нажмите Import from clipboard (или импортировать с буфера обмена)</div>
         <div class="address-box">
             <div class="address-text" id="androidKeyText">https://MeraVPN.cc.cd/sub</div>
@@ -904,7 +901,7 @@
             <i class="fas fa-party-horn" style="color: #fbbf24;"></i>
             <h2>Поздравляем!</h2>
         </div>
-        <div class="donate-select-desc">Вы успешно установили MeraVPN!</div>
+        <div class="donate-select-desc">Подпишитесь пожалуйста на наш Telegram канал! Так мы понимаем, сколько людей пользуются нашим VPN и как оптимизировать сервера именно для вас. К тому же, это единственная не финансовая поддержка.</div>
         <button class="donation-btn" id="congratsTelegramBtn" style="margin-bottom: 0.8rem;"><i class="fab fa-telegram"></i> Подписаться на наш Telegram канал</button>
         <button class="donation-btn" id="congratsDonateBtn" style="margin-bottom: 0.8rem;"><i class="fas fa-heart"></i> Пожертвование</button>
         <button class="back-btn" id="congratsCloseBtn">Назад</button>
@@ -1437,6 +1434,26 @@
         if (copyIphoneKey) copyIphoneKey.onclick = () => { navigator.clipboard.writeText(document.getElementById('iphoneKeyText').innerText); showNotification('Ключ скопирован!'); };
 
         // ---------- Android ----------
+        // Обработчики для кнопок подписок (happ://)
+
+        document.querySelectorAll(".subscribe-btn").forEach(btn => {
+
+            btn.onclick = () => {
+
+                const url = btn.getAttribute("data-url");
+
+                if (url) window.location.href = url;
+
+            };
+
+        });
+
+        
+
+        const androidTelegramBtn = document.getElementById("androidTelegramBtn");
+
+        if (androidTelegramBtn) androidTelegramBtn.onclick = () => window.open("https://t.me/MeraVPN", "_blank");
+
         const androidPlayBtn = document.getElementById('androidPlayBtn');
         if (androidPlayBtn) androidPlayBtn.onclick = () => window.open('https://play.google.com/store/apps/details?id=com.happproxy', '_blank');
         
