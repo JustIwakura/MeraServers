@@ -759,14 +759,14 @@
     <div class="modal">
         <div class="donate-select-header">
             <i class="fas fa-key"></i>
-            <h2>Вы почти завершили установку. Вам осталось только добавить профили с желаемыми серверами для работы VPN.</h2>
+            <h2>Завершите установку</h2>
         </div>
         <div class="donate-select-desc">После завершения установки программы запустите её, и вставьте ключ-ссылку в появившееся окно.</div>
         <div class="address-box">
             <div class="address-text" id="windowsKeyText">https://MeraVPN.cc.cd/sub</div>
             <div class="copy-circle" id="copyWindowsKey"><i class="far fa-copy"></i></div>
         </div>
-        <button class="donation-btn" id="windowsFinishBtn" style="margin-bottom: 0.8rem;">Подключить</button>
+        <button class="donation-btn" id="windowsFinishBtn" style="margin-bottom: 0.8rem;">Завершить</button>
         <button class="back-btn" id="windowsKeyBackBtn">Назад</button>
     </div>
 </div>
@@ -806,14 +806,14 @@
     <div class="modal">
         <div class="donate-select-header">
             <i class="fas fa-key"></i>
-            <h2>Вы почти завершили установку. Вам осталось только добавить профили с желаемыми серверами для работы VPN.</h2>
+            <h2>Завершите установку</h2>
         </div>
         <div class="donate-select-desc">После завершения установки программы запустите её, и вставьте ключ-ссылку в появившееся окно.</div>
         <div class="address-box">
             <div class="address-text" id="macosKeyText">https://MeraVPN.cc.cd/sub</div>
             <div class="copy-circle" id="copyMacosKey"><i class="far fa-copy"></i></div>
         </div>
-        <button class="donation-btn" id="macosFinishBtn" style="margin-bottom: 0.8rem;">Подключить</button>
+        <button class="donation-btn" id="macosFinishBtn" style="margin-bottom: 0.8rem;">Завершить</button>
         <button class="back-btn" id="macosKeyBackBtn">Назад</button>
     </div>
 </div>
@@ -853,14 +853,14 @@
     <div class="modal">
         <div class="donate-select-header">
             <i class="fas fa-mobile-alt"></i>
-            <h2>Вы почти завершили установку. Вам осталось только добавить профили с желаемыми серверами для работы VPN.</h2>
+            <h2>Завершите установку</h2>
         </div>
         <div class="donate-select-desc" style="color: rgba(255,255,255,0.9); text-align: left;">1. Скопируйте ключ-ссылку ниже<br>2. Зайдите в приложение<br>3. Нажмите на 3 точки, нажмите Import from clipboard (или импортировать с буфера обмена)</div>
         <div class="address-box">
             <div class="address-text" id="iphoneKeyText">https://MeraVPN.cc.cd/sub</div>
             <div class="copy-circle" id="copyIphoneKey"><i class="far fa-copy"></i></div>
         </div>
-        <button class="donation-btn" id="iphoneFinishBtn" style="margin-bottom: 0.8rem;">Подключить</button>
+        <button class="donation-btn" id="iphoneFinishBtn" style="margin-bottom: 0.8rem;">Завершить</button>
         <button class="back-btn" id="iphoneKeyBackBtn">Назад</button>
     </div>
 </div>
@@ -885,19 +885,34 @@
     <div class="modal">
         <div class="donate-select-header">
             <i class="fas fa-key"></i>
-            <h2>Вы почти завершили установку. Вам осталось только добавить профили с желаемыми серверами для работы VPN.</h2>
+            <h2>Завершите установку</h2>
         </div>
         <div class="donate-select-desc" style="color: rgba(255,255,255,0.9); text-align: left;">1. Скопируйте ключ-ссылку ниже<br>2. Зайдите в приложение<br>3. Нажмите на 3 точки, нажмите Import from clipboard (или импортировать с буфера обмена)</div>
         <div class="address-box">
             <div class="address-text" id="androidKeyText">https://MeraVPN.cc.cd/sub</div>
             <div class="copy-circle" id="copyAndroidKey"><i class="far fa-copy"></i></div>
         </div>
-        <button class="donation-btn" id="androidFinishBtn" style="margin-bottom: 0.8rem;">Подключить</button>
+        <button class="donation-btn" id="androidFinishBtn" style="margin-bottom: 0.8rem;">Завершить</button>
         <button class="back-btn" id="androidKeyBackBtn">Назад</button>
     </div>
 </div>
 
 <!-- 13. Поздравление -->
+<div class="modal-overlay" id="congratsModal">
+    <div class="modal">
+        <div class="donate-select-header">
+            <i class="fas fa-party-horn" style="color: #fbbf24;"></i>
+            <h2>Поздравляем!</h2>
+        </div>
+        <div class="donate-select-desc">Вы успешно установили MeraVPN!</div>
+        <button class="donation-btn" id="congratsTelegramBtn" style="margin-bottom: 0.8rem;"><i class="fab fa-telegram"></i> Подписаться на наш Telegram канал</button>
+        <button class="donation-btn" id="congratsDonateBtn" style="margin-bottom: 0.8rem;"><i class="fas fa-heart"></i> Пожертвование</button>
+        <button class="back-btn" id="congratsCloseBtn">Назад</button>
+    </div>
+</div>
+
+<!-- 14. Всё о нас -->
+<div class="modal-overlay" id="aboutModal">
     <div class="modal">
         <div class="donate-select-header">
             <i class="fas fa-user-astronaut"></i>
@@ -1222,6 +1237,291 @@
         const iphoneKeyModal = document.getElementById('iphoneKeyModal');
         const androidInstallModal = document.getElementById('androidInstallModal');
         const androidKeyModal = document.getElementById('androidKeyModal');
+        const congratsModal = document.getElementById('congratsModal');
+        const aboutModal = document.getElementById('aboutModal');
+        const donateSelectModal = document.getElementById('donateSelectModal');
+        const addressModal = document.getElementById('addressModal');
+
+        const notification = document.getElementById('notification');
+        const timerSpan = document.getElementById('timer');
+        const skipBtn = document.getElementById('skipBtn');
+
+        // ---------- ФУНКЦИЯ УВЕДОМЛЕНИЯ ----------
+        function showNotification(message) {
+            notification.querySelector('i').className = 'fas fa-check-circle';
+            const existingSpan = notification.querySelector('span');
+            if (existingSpan) existingSpan.remove();
+            const textSpan = document.createElement('span');
+            textSpan.textContent = message || 'Скопировано!';
+            notification.appendChild(textSpan);
+            notification.classList.add('show');
+            setTimeout(() => notification.classList.remove('show'), 2000);
+        }
+
+        // ---------- ЗАКРЫТИЕ ВСЕХ МОДАЛОК ----------
+        function closeAllModals() {
+            const modals = [supportModal, deviceModal, windowsInstallModal, windowsKeyModal, 
+                macosRegionModal, macosInstallModal, macosKeyModal, iphoneRegionModal, 
+                iphoneInstallModal, iphoneKeyModal, androidInstallModal, androidKeyModal, 
+                congratsModal, aboutModal, donateSelectModal, addressModal];
+            modals.forEach(m => m?.classList.remove('active'));
+            if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
+        }
+
+        // ---------- САЛЮТ (короткий, 2-3 залпа) ----------
+        function startFireworks() {
+            confetti({ particleCount: 80, spread: 60, origin: { y: 0.6 }, colors: ['#4f46e5', '#a78bfa', '#c4b5fd', '#fbbf24'] });
+            setTimeout(() => { confetti({ particleCount: 100, spread: 70, origin: { y: 0.5, x: 0.3 }, colors: ['#22c55e', '#10b981', '#f59e0b'] }); }, 300);
+            setTimeout(() => { confetti({ particleCount: 100, spread: 70, origin: { y: 0.5, x: 0.7 }, colors: ['#ef4444', '#f97316', '#a78bfa'] }); }, 600);
+            setTimeout(() => { confetti({ particleCount: 120, spread: 80, origin: { y: 0.4 }, colors: ['#ffffff', '#c4b5fd', '#4f46e5'] }); }, 1000);
+        }
+
+        // ---------- ТАЙМЕР (8 -> 1, потом убирается цифра) ----------
+        function startTimer() {
+            if (timerInterval) clearInterval(timerInterval);
+            
+            timerValue = 8;
+            skipEnabled = false;
+            skipBtn.classList.remove('active');
+            skipBtn.classList.add('skip-btn-inactive');
+            skipBtn.classList.remove('skip-btn-active');
+            skipBtn.style.cursor = 'not-allowed';
+            timerSpan.textContent = '8';
+            
+            function updateTimer() {
+                timerValue--;
+                
+                if (timerValue <= 0) {
+                    clearInterval(timerInterval);
+                    timerInterval = null;
+                    timerSpan.textContent = '';
+                    skipEnabled = true;
+                    skipBtn.classList.remove('skip-btn-inactive');
+                    skipBtn.classList.add('skip-btn-active');
+                    skipBtn.style.cursor = 'pointer';
+                    return;
+                }
+                
+                timerSpan.textContent = timerValue;
+            }
+            
+            timerInterval = setInterval(updateTimer, 1000);
+        }
+
+        // ---------- ОТКРЫТИЕ ПОДДЕРЖКИ ----------
+        const installBtn = document.getElementById('installBtn');
+        if (installBtn) {
+            installBtn.onclick = () => {
+                closeAllModals();
+                supportModal.classList.add('active');
+                startTimer();
+            };
+        }
+
+        // Кнопка "Продолжить установку"
+        if (skipBtn) {
+            skipBtn.onclick = () => {
+                if (skipEnabled) {
+                    supportModal.classList.remove('active');
+                    deviceModal.classList.add('active');
+                }
+            };
+        }
+
+        // Кнопка "Назад" в выборе устройства
+        const modalBackBtn = document.getElementById('modalBackBtn');
+        if (modalBackBtn) modalBackBtn.onclick = () => closeAllModals();
+
+        // Кнопки в пожертвованиях
+        const donateSelectBackBtn = document.getElementById('donateSelectBackBtn');
+        if (donateSelectBackBtn) donateSelectBackBtn.onclick = () => donateSelectModal.classList.remove('active');
+        
+        const addressBackBtn = document.getElementById('addressBackBtn');
+        if (addressBackBtn) addressBackBtn.onclick = () => addressModal.classList.remove('active');
+
+        // ---------- ВЫБОР УСТРОЙСТВА (только активные) ----------
+        document.querySelectorAll('.device-btn:not(.disabled)').forEach(btn => {
+            btn.onclick = () => {
+                currentDevice = btn.getAttribute('data-device');
+                deviceModal.classList.remove('active');
+                if (currentDevice === 'windows') windowsInstallModal.classList.add('active');
+                else if (currentDevice === 'macos') macosRegionModal.classList.add('active');
+                else if (currentDevice === 'iphone') iphoneRegionModal.classList.add('active');
+                else if (currentDevice === 'android') androidInstallModal.classList.add('active');
+            };
+        });
+
+        // ---------- WINDOWS ----------
+        const windowsDownloadBtn = document.getElementById('windowsDownloadBtn');
+        if (windowsDownloadBtn) windowsDownloadBtn.onclick = () => window.open('https://github.com/Happ-proxy/happ-desktop/releases/latest/download/setup-Happ.x64.exe', '_blank');
+        
+        const windowsNextBtn = document.getElementById('windowsNextBtn');
+        if (windowsNextBtn) windowsNextBtn.onclick = () => { windowsInstallModal.classList.remove('active'); windowsKeyModal.classList.add('active'); };
+        
+        const windowsBackBtn = document.getElementById('windowsBackBtn');
+        if (windowsBackBtn) windowsBackBtn.onclick = () => { windowsInstallModal.classList.remove('active'); deviceModal.classList.add('active'); };
+        
+        const windowsFinishBtn = document.getElementById('windowsFinishBtn');
+        if (windowsFinishBtn) windowsFinishBtn.onclick = () => { windowsKeyModal.classList.remove('active'); congratsModal.classList.add('active'); startFireworks(); };
+        
+        const windowsKeyBackBtn = document.getElementById('windowsKeyBackBtn');
+        if (windowsKeyBackBtn) windowsKeyBackBtn.onclick = () => { windowsKeyModal.classList.remove('active'); windowsInstallModal.classList.add('active'); };
+        
+        const copyWindowsKey = document.getElementById('copyWindowsKey');
+        if (copyWindowsKey) copyWindowsKey.onclick = () => { navigator.clipboard.writeText(document.getElementById('windowsKeyText').innerText); showNotification('Ключ скопирован!'); };
+
+        // ---------- macOS ----------
+        const macosYesBtn = document.getElementById('macosYesBtn');
+        if (macosYesBtn) macosYesBtn.onclick = () => { macosRegion = 'ru'; macosRegionModal.classList.remove('active'); macosInstallModal.classList.add('active'); };
+        
+        const macosNoBtn = document.getElementById('macosNoBtn');
+        if (macosNoBtn) macosNoBtn.onclick = () => { macosRegion = 'us'; macosRegionModal.classList.remove('active'); macosInstallModal.classList.add('active'); };
+        
+        const macosRegionBackBtn = document.getElementById('macosRegionBackBtn');
+        if (macosRegionBackBtn) macosRegionBackBtn.onclick = () => { macosRegionModal.classList.remove('active'); deviceModal.classList.add('active'); };
+        
+        const macosDownloadBtn = document.getElementById('macosDownloadBtn');
+        if (macosDownloadBtn) {
+            macosDownloadBtn.onclick = () => { 
+                const url = macosRegion === 'ru' ? 'https://apps.apple.com/ru/app/happ-proxy-utility-plus/id6746188973' : 'https://apps.apple.com/us/app/happ-proxy-utility/id6504287215'; 
+                window.open(url, '_blank'); 
+            };
+        }
+        
+        const macosNextBtn = document.getElementById('macosNextBtn');
+        if (macosNextBtn) macosNextBtn.onclick = () => { macosInstallModal.classList.remove('active'); macosKeyModal.classList.add('active'); };
+        
+        const macosInstallBackBtn = document.getElementById('macosInstallBackBtn');
+        if (macosInstallBackBtn) macosInstallBackBtn.onclick = () => { macosInstallModal.classList.remove('active'); macosRegionModal.classList.add('active'); };
+        
+        const macosFinishBtn = document.getElementById('macosFinishBtn');
+        if (macosFinishBtn) macosFinishBtn.onclick = () => { macosKeyModal.classList.remove('active'); congratsModal.classList.add('active'); startFireworks(); };
+        
+        const macosKeyBackBtn = document.getElementById('macosKeyBackBtn');
+        if (macosKeyBackBtn) macosKeyBackBtn.onclick = () => { macosKeyModal.classList.remove('active'); macosInstallModal.classList.add('active'); };
+        
+        const copyMacosKey = document.getElementById('copyMacosKey');
+        if (copyMacosKey) copyMacosKey.onclick = () => { navigator.clipboard.writeText(document.getElementById('macosKeyText').innerText); showNotification('Ключ скопирован!'); };
+
+        // ---------- iPhone ----------
+        const iphoneYesBtn = document.getElementById('iphoneYesBtn');
+        if (iphoneYesBtn) iphoneYesBtn.onclick = () => { iphoneRegion = 'ru'; iphoneRegionModal.classList.remove('active'); iphoneInstallModal.classList.add('active'); };
+        
+        const iphoneNoBtn = document.getElementById('iphoneNoBtn');
+        if (iphoneNoBtn) iphoneNoBtn.onclick = () => { iphoneRegion = 'us'; iphoneRegionModal.classList.remove('active'); iphoneInstallModal.classList.add('active'); };
+        
+        const iphoneRegionBackBtn = document.getElementById('iphoneRegionBackBtn');
+        if (iphoneRegionBackBtn) iphoneRegionBackBtn.onclick = () => { iphoneRegionModal.classList.remove('active'); deviceModal.classList.add('active'); };
+        
+        const iphoneDownloadBtn = document.getElementById('iphoneDownloadBtn');
+        if (iphoneDownloadBtn) {
+            iphoneDownloadBtn.onclick = () => { 
+                const url = iphoneRegion === 'ru' ? 'https://apps.apple.com/ru/app/happ-proxy-utility-plus/id6746188973' : 'https://apps.apple.com/us/app/happ-proxy-utility/id6504287215'; 
+                window.open(url, '_blank'); 
+            };
+        }
+        
+        const iphoneNextBtn = document.getElementById('iphoneNextBtn');
+        if (iphoneNextBtn) iphoneNextBtn.onclick = () => { iphoneInstallModal.classList.remove('active'); iphoneKeyModal.classList.add('active'); };
+        
+        const iphoneInstallBackBtn = document.getElementById('iphoneInstallBackBtn');
+        if (iphoneInstallBackBtn) iphoneInstallBackBtn.onclick = () => { iphoneInstallModal.classList.remove('active'); iphoneRegionModal.classList.add('active'); };
+        
+        const iphoneFinishBtn = document.getElementById('iphoneFinishBtn');
+        if (iphoneFinishBtn) iphoneFinishBtn.onclick = () => { iphoneKeyModal.classList.remove('active'); congratsModal.classList.add('active'); startFireworks(); };
+        
+        const iphoneKeyBackBtn = document.getElementById('iphoneKeyBackBtn');
+        if (iphoneKeyBackBtn) iphoneKeyBackBtn.onclick = () => { iphoneKeyModal.classList.remove('active'); iphoneInstallModal.classList.add('active'); };
+        
+        const copyIphoneKey = document.getElementById('copyIphoneKey');
+        if (copyIphoneKey) copyIphoneKey.onclick = () => { navigator.clipboard.writeText(document.getElementById('iphoneKeyText').innerText); showNotification('Ключ скопирован!'); };
+
+        // ---------- Android ----------
+        const androidPlayBtn = document.getElementById('androidPlayBtn');
+        if (androidPlayBtn) androidPlayBtn.onclick = () => window.open('https://play.google.com/store/apps/details?id=com.happproxy', '_blank');
+        
+        const androidGitBtn = document.getElementById('androidGitBtn');
+        if (androidGitBtn) androidGitBtn.onclick = () => window.open('https://github.com/Happ-proxy/happ-android/releases/latest/download/Happ.apk', '_blank');
+        
+        const androidNextBtn = document.getElementById('androidNextBtn');
+        if (androidNextBtn) androidNextBtn.onclick = () => { androidInstallModal.classList.remove('active'); androidKeyModal.classList.add('active'); };
+        
+        const androidBackBtn = document.getElementById('androidBackBtn');
+        if (androidBackBtn) androidBackBtn.onclick = () => { androidInstallModal.classList.remove('active'); deviceModal.classList.add('active'); };
+        
+        const androidFinishBtn = document.getElementById('androidFinishBtn');
+        if (androidFinishBtn) androidFinishBtn.onclick = () => { androidKeyModal.classList.remove('active'); congratsModal.classList.add('active'); startFireworks(); };
+        
+        const androidKeyBackBtn = document.getElementById('androidKeyBackBtn');
+        if (androidKeyBackBtn) androidKeyBackBtn.onclick = () => { androidKeyModal.classList.remove('active'); androidInstallModal.classList.add('active'); };
+        
+        const copyAndroidKey = document.getElementById('copyAndroidKey');
+        if (copyAndroidKey) copyAndroidKey.onclick = () => { navigator.clipboard.writeText(document.getElementById('androidKeyText').innerText); showNotification('Ключ скопирован!'); };
+
+        // ---------- ПОЗДРАВЛЕНИЕ ----------
+        const congratsTelegramBtn = document.getElementById('congratsTelegramBtn');
+        if (congratsTelegramBtn) {
+            congratsTelegramBtn.onclick = () => window.open('https://t.me/MeraVPN', '_blank');
+        }      
+
+      
+        const congratsDonateBtn = document.getElementById('congratsDonateBtn');
+        if (congratsDonateBtn) congratsDonateBtn.onclick = () => { congratsModal.classList.remove('active'); donateSelectModal.classList.add('active'); };
+        
+        const congratsCloseBtn = document.getElementById('congratsCloseBtn');
+        if (congratsCloseBtn) congratsCloseBtn.onclick = () => congratsModal.classList.remove('active');
+
+        // ---------- ВСЁ О НАС ----------
+        const aboutCreatorBtn = document.getElementById('aboutCreatorBtn');
+        if (aboutCreatorBtn) aboutCreatorBtn.onclick = () => aboutModal.classList.add('active');
+        
+        const goToCreatorBtn = document.getElementById('goToCreatorBtn');
+        if (goToCreatorBtn) goToCreatorBtn.onclick = () => window.open('https://github.com/meraws', '_blank');
+        
+        const aboutCloseBtn = document.getElementById('aboutCloseBtn');
+        if (aboutCloseBtn) aboutCloseBtn.onclick = () => aboutModal.classList.remove('active');
+
+        // ---------- ПОЖЕРТВОВАНИЯ ----------
+        const donateMainBtn = document.getElementById('donateMainBtn');
+        if (donateMainBtn) donateMainBtn.onclick = () => donateSelectModal.classList.add('active');
+        
+        const donateSupportBtn = document.getElementById('donateSupportBtn');
+        if (donateSupportBtn) donateSupportBtn.onclick = () => { supportModal.classList.remove('active'); donateSelectModal.classList.add('active'); };
+        
+        // ИСПРАВЛЕНО: ссылка на Telegram (рабочая)
+        const telegramSupportBtn = document.getElementById('telegramSupportBtn');
+        if (telegramSupportBtn) {
+            telegramSupportBtn.onclick = () => window.open('https://t.me/MeraVPN', '_blank');
+        }        
+
+
+        // Обработка кнопок выбора типа пожертвования
+        document.querySelectorAll('.donate-type-btn').forEach(btn => {
+            btn.onclick = () => {
+                const type = btn.getAttribute('data-type');
+                // ИСПРАВЛЕНО: CryptoBot и Telegram звёзды ведут на yandex.ru (рабочая ссылка)
+                if (type === 'cryptobot') window.open('https://t.me/send?start=IV0ucoV6DZCd', '_blank');
+                else if (type === 'stars') window.open('https://t.me/meravpn/174', '_blank');
+                else if (addresses[type]) { 
+                    donateSelectModal.classList.remove('active'); 
+                    const addressTextSpan = document.getElementById('addressText');
+                    if (addressTextSpan) addressTextSpan.innerText = addresses[type];
+                    addressModal.classList.add('active'); 
+                }
+            };
+        });
+        
+        const copyAddressBtn = document.getElementById('copyAddressBtn');
+        if (copyAddressBtn) {
+            copyAddressBtn.onclick = () => { 
+                const addressTextSpan = document.getElementById('addressText');
+                if (addressTextSpan) navigator.clipboard.writeText(addressTextSpan.innerText);
+                showNotification('Адрес скопирован!'); 
+            };
+        }
+
+        // ---------- ЗАКРЫТИЕ МОДАЛОК ПО КЛИКУ НА ОВЕРЛЕЙ ----------
+        document.querySelectorAll('.modal-overlay').forEach(overlay => {
             overlay.onclick = (e) => {
                 if (e.target === overlay) overlay.classList.remove('active');
             };
